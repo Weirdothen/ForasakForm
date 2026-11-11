@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1B263B">
+  <title>فُرَصَك | مش لازم تكون جاهز، بس لازم تبدأ</title>
+  <meta name="description" content="فُرَصَك مجتمع بيساعدك تفهم الفرص، تبحث عن المناسب ليك، تقدم، وتتميز في كل خطوة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Changa:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --navy:#1B263B; --yellow:#F4AF42; --turquoise:#32CBB8;
+      --coral:#DD6367; --white:#FFFFFF; --muted:#687386;
+      --line:#E7EAF0; --soft:#F7F8FA;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--white);color:var(--navy);font-family:"Cairo",sans-serif}
+    h1,h2,.brand{font-family:"Changa","Cairo",sans-serif}
+    .brand{display:inline-flex;align-items:center;line-height:0}
+    .brand-logo{display:block;width:150px;height:auto;max-height:70px;object-fit:contain}
+    .topbar .brand-logo{width:142px}
+
+    button,input{font:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1080px,calc(100% - 48px));margin:auto}
+    .topbar{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:25px;letter-spacing:-1px}
+    .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:0;color:var(--muted);line-height:1.2}
+    .top-note{font-size:13px;color:var(--muted);font-weight:600}
+    .hero{padding:48px 0 38px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:64px;min-height:390px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;color:var(--navy);margin-bottom:18px}
+    .eyebrow:before{content:"";width:8px;height:8px;background:var(--coral);border-radius:50%}
+    h1{font-size:clamp(38px,5.3vw,64px);line-height:1.35;letter-spacing:-1.8px;margin:0 0 18px;font-weight:900;max-width:610px}
+    h1 .start{position:relative;white-space:nowrap;z-index:0}
+    h1 .start:after{content:"";position:absolute;right:0;left:0;bottom:5px;height:13px;background:var(--yellow);opacity:.72;z-index:-1;transform:rotate(-1deg)}
+    .intro{font-size:18px;line-height:2.1;color:#465267;max-width:600px;margin:0}
+    .word{font-weight:900;padding:0 2px}
+    .word.w1{color:#C58A24}.word.w2{color:#159C8E}.word.w3{color:var(--coral)}.word.w4{color:#526B9A}.word.highlight-navy{color:#1b263b}
+    .hero-art{position:relative;min-height:365px;display:grid;place-items:center}
+    .orbit{width:300px;height:300px;border:1px solid #E8EBF0;border-radius:50%;position:relative;display:grid;place-items:center}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #EEF0F4;border-radius:50%}
+    .orbit:before{inset:22px}.orbit:after{inset:48px}
+    .center-mark{width:205px;height:153px;background:transparent;border-radius:0;display:grid;place-items:center;transform:translateY(-4px);animation:logoFloat 4.2s ease-in-out infinite;filter:drop-shadow(0 9px 0 #1B263B12)}
+    .center-mark img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.5);transform-origin:center}
+    @keyframes logoFloat{0%,100%{transform:translateY(-4px)}50%{transform:translateY(-13px)}}
+    .dot{position:absolute;width:17px;height:17px;border-radius:50%}
+    .dot.one{background:var(--turquoise);top:34px;right:36px}
+    .dot.two{background:var(--coral);bottom:38px;left:30px;width:23px;height:23px}
+    .dot.three{background:var(--yellow);top:50%;left:3px}
+    .orbit-label{position:absolute;background:white;border:1px solid var(--line);padding:7px 13px;border-radius:8px;font-size:12px;font-weight:800;box-shadow:0 5px 18px #1b263b0b}
+    .label-a{top:25px;left:0}.label-b{right:-18px;bottom:48px}.label-c{left:12px;bottom:15px}
+    .join-section{padding:32px 0 74px}
+    .join-panel{position:relative;overflow:hidden;background:var(--soft);border:1px solid #EFF1F4;border-radius:18px;padding:35px 40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;transition:border-color .3s,box-shadow .3s}
+    .join-panel:after{content:"";position:absolute;right:0;top:22px;bottom:22px;width:4px;background:var(--turquoise);border-radius:4px}
+    .join-panel:focus-within{border-color:#BCEBE5;box-shadow:0 12px 34px #1B263B0C}
+    .join-copy h2{position:relative}
+    .join-copy h2:after{content:"";display:block;width:42px;height:4px;border-radius:4px;background:var(--yellow);margin-top:8px}
+    .join-copy h2{font-size:27px;margin:0 0 7px;font-weight:900}
+    .join-copy p{font-size:14px;line-height:1.9;color:var(--muted);margin:0;max-width:330px}
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field label{font-size:12px;font-weight:800}
+    .field input{height:49px;border:1px solid #DDE2E9;border-radius:8px;background:white;padding:0 14px;outline:none;color:var(--navy);transition:border .2s,box-shadow .2s}
+    .field input::placeholder{color:#A4ACB8}
+    .field input:focus{border-color:var(--turquoise);box-shadow:0 0 0 3px #32CBB81f;background:#FEFFFF}
+    .field input:not(:placeholder-shown):valid{border-color:#9ADFD6}
+    .field{animation:fieldIn .55s both}
+    .field:nth-child(2){animation-delay:.09s}
+    .submit{position:relative;overflow:hidden}
+    .submit:after{content:"";position:absolute;inset:0;background:var(--turquoise);opacity:0;transform:translateX(100%);transition:transform .35s,opacity .35s;z-index:0}
+    .submit:hover:after{opacity:.12;transform:translateX(0)}
+    .submit .btn-label,.submit .spinner{position:relative;z-index:1}
+    .field input.invalid{border-color:var(--coral)}
+    .error{font-size:11px;color:var(--coral);min-height:16px}
+    .submit{grid-column:1/-1;height:50px;border:0;border-radius:8px;background:var(--navy);color:white;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .2s,background .2s}
+    .submit:hover{background:#273752;transform:translateY(-2px)}
+    .submit:disabled{opacity:.7;cursor:wait;transform:none}
+    .spinner{width:17px;height:17px;border:2px solid #ffffff55;border-top-color:white;border-radius:50%;display:none;animation:spin .7s linear infinite}
+    .submit.loading .spinner{display:block}.submit.loading .btn-label{display:none}
+    .privacy{grid-column:1/-1;margin:0;color:#8992A0;font-size:10px;display:flex;align-items:center;gap:6px}
+    .footer{padding:20px 0 30px;border-top:1px solid #F0F1F4;display:flex;justify-content:center;color:#8B93A0;font-size:11px}
+    .signature{color:var(--navy);font-weight:800}
+    .page{display:none;min-height:100vh}.page.active{display:block}
+    #thanks{background:var(--white);background-image:radial-gradient(circle at 12% 15%,#32CBB814 0 3px,transparent 4px),radial-gradient(circle at 88% 20%,#F4AF421c 0 4px,transparent 5px),radial-gradient(circle at 80% 76%,#DD636714 0 3px,transparent 4px)}
+    .thanks-wrap{width:min(850px,calc(100% - 40px));margin:0 auto;text-align:center;padding:42px 0 48px;position:relative}
+    .thanks-wrap:before{content:"";position:absolute;z-index:-1;top:115px;left:50%;transform:translateX(-50%);width:min(680px,92vw);height:270px;background:#F7F8FA;border-radius:48% 52% 45% 55%}
+    .success-icon{width:94px;height:94px;margin:25px auto 24px;border-radius:30px;background:#DDF6E8;color:#188A52;display:grid;place-items:center;font-size:38px;box-shadow:8px 8px 0 #32CBB8;animation:pop .65s cubic-bezier(.2,.8,.2,1) both}
+    .thanks-wrap h1{font-size:clamp(35px,5vw,52px);margin:0 auto 7px;max-width:none;animation:rise .65s .12s both}
+    .thanks-wrap .lead{font-size:17px;color:var(--muted);margin:0 0 30px;animation:rise .6s .22s both}
+    .whatsapp{background:#188A52;color:white;border-radius:9px;padding:16px 28px;display:inline-flex;align-items:center;gap:11px;font-weight:800;box-shadow:0 7px 0 #116B3F;transition:transform .2s,background .2s,box-shadow .2s;animation:rise .6s .32s both}
+    .whatsapp:hover{transform:translateY(-4px);background:#273752;box-shadow:0 11px 0 #111B2C}
+    .whatsapp i{font-size:20px;color:#DDF6E8}
+    .optional{font-size:11px;color:#929AA6;margin:9px 0 0}
+    .thanks-wrap .optional{animation:rise .55s .5s both}
+    .social-area{margin:44px auto 0;max-width:720px;padding:26px 22px 22px;border:1px solid var(--line);border-radius:16px;background:#FFFFFFE8;box-shadow:0 14px 38px #1B263B0A;animation:rise .65s .42s both}
+    .social-area h2{font-size:25px;margin:0 0 4px;font-weight:900}
+    .social-area>p{font-size:13px;color:var(--muted);margin:0 0 22px}
+    .socials{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .social{position:relative;min-height:76px;border:2px solid var(--line);border-radius:12px;padding:18px 18px;display:flex;align-items:center;justify-content:center;gap:12px;font-weight:900;font-size:15px;background:#fff;cursor:pointer;box-shadow:0 4px 0 #1B263B0A;transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease;outline:none}
+    .social i{font-size:25px;transition:transform .2s ease}
+    .social:after{content:"↗";font-size:16px;font-weight:900;opacity:.55;position:absolute;left:14px;top:12px;transition:transform .2s ease,opacity .2s ease}
+    .social:hover,.social:focus-visible{transform:translateY(-5px);background:#fff;border-color:var(--turquoise);box-shadow:0 7px 0 #32CBB82B,0 12px 24px #1B263B0D}
+    .social:hover i,.social:focus-visible i{transform:scale(1.12)}
+    .social:hover:after,.social:focus-visible:after{opacity:1;transform:translate(2px,-2px)}
+    .social:active{transform:translateY(-1px);box-shadow:0 2px 0 #32CBB82B}
+    .social.instagram:hover,.social.instagram:focus-visible{border-color:#C34E79;box-shadow:0 7px 0 #C34E7924,0 12px 24px #1B263B0D}
+    .social.facebook:hover,.social.facebook:focus-visible{border-color:#4267B2;box-shadow:0 7px 0 #4267B224,0 12px 24px #1B263B0D}
+    .social.linkedin:hover,.social.linkedin:focus-visible{border-color:#0A78A8;box-shadow:0 7px 0 #0A78A824,0 12px 24px #1B263B0D}
+    .social:nth-child(1){animation:rise .55s .08s both}
+    .social:nth-child(2){animation:rise .55s .17s both}
+    .social:nth-child(3){animation:rise .55s .26s both}
+    .social i{font-size:22px}
+    .social.instagram i{color:#C34E79}.social.facebook i{color:#4267B2}.social.linkedin i{color:#0A78A8}
+    .back{display:inline-flex;margin-top:34px;color:#8992A0;font-size:12px;text-decoration:underline;text-underline-offset:4px}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:var(--navy);color:white;padding:11px 17px;border-radius:8px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:5}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .hero .eyebrow{animation:rise .55s .05s both}.hero h1{animation:rise .65s .13s both}.hero .intro{animation:rise .65s .23s both}.hero-art{animation:rise .7s .18s both}
+    @keyframes rise{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fieldIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pop{0%{opacity:0;transform:scale(.65) rotate(-12deg)}75%{transform:scale(1.08) rotate(3deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+    @media(max-width:760px){
+      .shell{width:min(100% - 36px,540px)}.topbar{height:70px}.top-note{font-size:11px}.topbar .brand-logo{width:126px}
+      .hero{padding:35px 0 24px;grid-template-columns:1fr;gap:18px;min-height:0}
+      h1{font-size:clamp(37px,10vw,54px);line-height:1.42}
+      .intro{font-size:16px;line-height:2}
+      .hero-art{min-height:260px}.orbit{width:235px;height:235px}.center-mark{width:145px;height:108px}
+      .orbit:before{inset:17px}.orbit:after{inset:36px}.label-a{top:5px;left:0}.label-b{right:-7px;bottom:25px}.label-c{left:8px;bottom:-3px}
+      .join-section{padding:25px 0 48px}.join-panel{padding:25px 20px;grid-template-columns:1fr;gap:20px}
+      .join-copy h2{font-size:24px}.join-copy p{max-width:none}
+      .form{grid-template-columns:1fr;gap:8px}.submit{grid-column:1}
+      .privacy{grid-column:1}
+      .footer{gap:10px;flex-direction:column;text-align:center}
+      .thanks-wrap{padding-top:25px}.thanks-wrap .brand-logo{width:138px;animation:rise .55s both}.social-area{margin-top:35px}.socials{gap:8px}
+      .social{min-height:88px;padding:16px 7px;flex-direction:column;gap:7px;font-size:12px}.social i{font-size:23px}.social:after{left:9px;top:7px;font-size:14px}
+    }
+    @media(max-width:370px){.shell{width:calc(100% - 28px)}.top-note{max-width:120px;text-align:left}.social{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <main id="landing" class="page active">
+    <div class="shell">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">أهلاً بيك في فُرَصَك</div>
+          <h1>مش لازم تكون جاهز، <span class="start">بس لازم تبدأ</span></h1>
+          <p class="intro">مكان يساعدك <span class="word w1">تفهم</span> الفرص، و<span class="word w2">تبحث</span> عن المناسب ليك، و<span class="word w3">تقدم</span>، و<span class="word w4 highlight-navy">تتميز</span> على مدار الرحلة.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit">
+            <span class="dot one"></span><span class="dot two"></span><span class="dot three"></span>
+            <span class="center-mark"><img src="logo/logo.png" onerror="this.onerror=null;this.src='logo.png';" alt="فُرَصَك"></span>
+            <span class="orbit-label label-a">فرص تستاهلها</span>
+            <span class="orbit-label label-b">خطوة بخطوة</span>
+            <span class="orbit-label label-c">على طريقك</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="join-section reveal" id="join">
+        <div class="join-panel">
+          <div class="join-copy">
+            <h2>خليك قريب من كل جديد!</h2>
+            <p>انضم لفُرَصَك، وخلي الفرص والمحتوى والتجارب الجديدة توصلك أول بأول.</p>
+          </div>
+          <form class="form" id="joinForm" novalidate>
+            <div class="field">
+              <label for="name">الاسم</label>
+              <input id="name" name="name" type="text" placeholder="اسمك إيه؟" autocomplete="name" required>
+              <span class="error" id="nameError" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" dir="ltr" required>
+              <span class="error" id="emailError" aria-live="polite"></span>
+            </div>
+            <button class="submit" id="submitBtn" type="submit">
+              <span class="btn-label">انضم لينا <i class="fa-solid fa-arrow-left"></i></span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+            <p class="privacy"><i class="fa-solid fa-lock"></i> بياناتك هتُستخدم لإرسال تحديثات فُرَصَك فقط، وتقدر تلغي الاشتراك مستقبلًا.</p>
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <span class="signature">فُرَصَك | بُناة الجسر ورفقاء السير</span>
+      </footer>
+    </div>
+  </main>
+
+  <main id="thanks" class="page">
+    <div class="thanks-wrap">
+      <a class="brand" href="#" aria-label="فُرَصَك"><img class="brand-logo" src="data:image/png;base64,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`" alt="فُرَصَك" /></a>
+      <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+      <h1>وصلت لفُرَصَك! 🎉</h1>
+      <p class="lead">خليك قريب مننا، واستعد لكل جديد بنحضّرهولك.</p>
+
+      <section aria-labelledby="whatsappTitle">
+        <h2 id="whatsappTitle" style="font-size:20px;margin:0 0 13px">خلينا نكمل الرحلة سوا!</h2>
+        <a class="whatsapp" id="whatsappLink" href="https://chat.whatsapp.com/FKYsksPG8eaKvC1q42iE3n" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> انضم لمجتمعنا على واتساب
+        </a>
+        <p class="optional">الانضمام لمجتمع واتساب اختياري — إحنا مبسوطين إنك بقيت معانا في كل الأحوال.</p>
+      </section>
+
+      <section class="social-area" aria-labelledby="socialTitle">
+        <h2 id="socialTitle">تابع رحلتنا وخليك جزء منها</h2>
+        <p>تلاقينا على منصاتنا، وشوف كل جديد بنشاركه.</p>
+        <div class="socials">
+          <a class="social instagram" href="https://www.instagram.com/forasak?igsh=MXNuaDVibGpqOHg3cA%3D%3D" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+          <a class="social facebook" href="https://www.facebook.com/profile.php?id=100086433275222&rdid=ztxUpiolMh2dgreS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Cx2WLoKC1%2F#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+          <a class="social linkedin" href="https://www.linkedin.com/company/%D9%81%D8%B1%D8%B5%D9%83-forasak/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+        </div>
+      </section>
+      <a href="#" class="back" id="backLink">العودة للصفحة الرئيسية</a>
+      <p class="optional" style="margin-top:28px">فُرَصَك | بُناة الجسر ورفقاء السير</p>
+    </div>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    /*
+      FORASAK SETUP & GOOGLE SHEETS INTEGRATION
+      Spreadsheet URL: https://docs.google.com/spreadsheets/d/1IOYYl6qf15DkYO0Jtky9nweYBY3xXdTM0_yiNUq_caU/edit?usp=sharing
+      
+      لربط النموذج بالجوجل شيت:
+      1. افتح شيت جوجل الخاص بك
+      2. من القائمة اضغط على: Extensions (ملحقات) -> Apps Script
+      3. الصق كود السكريبت الموجود في ملف google-apps-script.js
+      4. اضغط Deploy -> New deployment -> اختر النوع Web app
+         - Execute as: Me
+         - Who has access: Anyone
+      5. انسخ رابط Web App وضعه في المتغير FORM_ENDPOINT بالأسفل:
+    */
+    const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbylLUQZR9T1ehfh9mAJNUQZUDYovU7ZEO2MHhZfoeC0dZkmfOiv7R1H_VhKg7tiu3SVGg/exec";
+    const form = document.getElementById("joinForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const toast = document.getElementById("toast");
+    const landing = document.getElementById("landing");
+    const thanks = document.getElementById("thanks");
+
+    function showPage(page) {
+      landing.classList.toggle("active", page === "landing");
+      thanks.classList.toggle("active", page === "thanks");
+      window.scrollTo({top:0,behavior:"smooth"});
+      if (page === "thanks") document.title = "وصلت لفُرَصَك! | Forasak";
+      else document.title = "فُرَصَك | مش لازم تكون جاهز، بس لازم تبدأ";
+    }
+    function notify(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 2800);
+    }
+    function setError(field, message) {
+      const input = document.getElementById(field);
+      document.getElementById(field + "Error").textContent = message;
+      input.classList.toggle("invalid", Boolean(message));
+      input.setAttribute("aria-invalid", message ? "true" : "false");
+    }
+    function validEmail(value) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+    }
+    ["name","email"].forEach(id => {
+      document.getElementById(id).addEventListener("input", () => setError(id, ""));
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (submitBtn.disabled) return;
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      let valid = true;
+      if (name.length < 2) { setError("name", "اكتب اسمك بشكل صحيح."); valid = false; }
+      else setError("name", "");
+      if (!validEmail(email)) { setError("email", "راجع البريد الإلكتروني واكتب عنوان صحيح."); valid = false; }
+      else setError("email", "");
+      if (!valid) return;
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add("loading");
+      try {
+        if (FORM_ENDPOINT && FORM_ENDPOINT.trim() !== "") {
+          // إرسال البيانات مباشرة إلى Google Sheets بدون أي قيود أو تعارض CORS
+          await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              date: new Date().toISOString()
+            })
+          });
+        } else {
+          // وضع تجريبي مؤقت في المتصفح حتى يتم وضع رابط الـ Web App
+          notify("⚠️ تنبيه: يجب وضع رابط Web App في كود index.html ليتم الحفظ في جوجل شيت!");
+          const entries = JSON.parse(localStorage.getItem("forasak_demo_signups") || "[]");
+          entries.push({name, email, createdAt: new Date().toISOString()});
+          localStorage.setItem("forasak_demo_signups", JSON.stringify(entries));
+          await new Promise(resolve => setTimeout(resolve, 1200));
+        }
+        sessionStorage.setItem("forasak_joined_name", name);
+        form.reset();
+        showPage("thanks");
+      } catch (error) {
+        console.error("Submission error:", error);
+        notify("حصلت مشكلة بسيطة أثناء التسجيل. جرّب تاني بعد شوية.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("loading");
+      }
+    });
+
+    document.getElementById("backLink").addEventListener("click", (event) => {
+      event.preventDefault();
+      showPage("landing");
+    });
+
+    // Placeholder links stay on this page and explain what needs to be configured.
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+      if (link.id === "backLink" || link.classList.contains("brand")) return;
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const label = link.dataset.placeholder || (link.id === "whatsappLink" ? "WhatsApp" : "الرابط");
+        notify("أضف رابط " + label + " الحقيقي في الكود قبل النشر.");
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
